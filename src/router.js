@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-
+import contact from "./views/contact.vue";
+import testimonials from "./views/testimonials.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -21,6 +22,16 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    {
+      path:"/contact",
+      name: "contact",
+      component: contact
+    },
+    {
+      path:"/testimonials",
+      name: "testimonials",
+      component: testimonials
     }
   ]
 });
